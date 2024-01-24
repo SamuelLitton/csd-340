@@ -1,0 +1,31 @@
+#image-gallery{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 10%;
+}
+#image-gallery div{
+    border: 1px solid mediumpurple;
+}
+img{
+    width: 50%;
+    height: 50%;
+}
+h1, h3, figure{
+    text-align: center;
+}
+h1, h3, figcaption{
+    color: mediumpurple;
+}
+figcaption{
+    font-style: italic;
+    font-size: .75em;
+}
+a{
+    float: right;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
