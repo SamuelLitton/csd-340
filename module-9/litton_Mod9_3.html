@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+Assignment 9.3
+Author: Samuel Litton
+Date: 2/15/2024
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSD 340 Development with HTML and CSS</title>
+
+    <script>
+        var atmosphere = "atmosphere";
+        var myriad = "myriad";
+        var flood = "flood";
+        var love = "love";
+    </script>
+</head>
+<body>
+    <div>
+        <h1>Assignment 9.3: JavaScript - Part 1</h1>
+        <h2>“Twin Stars Aloft” by Charles Kingsley</h2>
+
+        <p>
+            Twin stars, aloft in ether clear, <br>
+            Around each other roll alway, <br>
+            Within one common <span id="atmosphere">______</span> <br>
+            Of their own mutual light and day.
+        </p>
+        <p>
+            And <span id="myriad">______</span> happy eyes are bent <br>
+            Upon their changeless love alway; <br>
+            As strengthened by their one intent, <br>
+            They pour the <span id="flood">______</span> of life and day.
+        </p>
+        <p>
+            So we, through this world’s waning night, <br>
+            Shall, hand in hand, pursue our way; <br>
+            Shed round us order, <span id="love">______</span>, and light, <br>
+            And shine unto the perfect day.
+        </p>
+
+        <p>
+            <button type="button" onclick="document.getElementById('atmosphere').innerHTML = atmosphere">atmosphere</button>
+            <button type="button" onclick="document.getElementById('myriad').innerHTML = myriad">myriad</button>
+            <button type="button" onclick="document.getElementById('flood').innerHTML = flood">flood</button>
+            <button type="button" onclick="document.getElementById('love').innerHTML = love">love</button>
+        </p>
+
+    </div>
+</body>
+</html>
