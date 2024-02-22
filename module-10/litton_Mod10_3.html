@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--
+Assignment 10.3
+Author: Samuel Litton
+Date: 2/22/2024
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <script>
+        function changeImage(){
+            var imageToChange = document.getElementById('changingImage');
+            imageToChange.src = 'sunset.jpg';
+            imageToChange.alt = 'A sunset'
+        }
+    </script>
+</head>
+<body>
+    <h1>Assignment 10.3: JavaScript - Part 2</h1>
+
+    <div>
+        <h2>Click the picture to make it day!</h2>
+        <a href="#">
+            <img src="telescope.jpg" alt="The night sky" id="changingImage" onclick=changeImage()>
+        </a>
+    </div>
+
+</body>
+</html>
