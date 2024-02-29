@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+Assignment 11.2
+Author: Samuel Litton
+Date: 2/29/2024
+-->
+<head>
+    <meta charset="UTF-8">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+
+    <script>
+        var toDoList = [];
+
+        function getInput() {
+            var input = document.getElementById("to-do-list-input").value;
+            toDoList.push(input)
+            alert("Item: "+input+" Added at index "+(toDoList.length-1))
+        }
+
+        function displayList() {
+            document.getElementById("to-do-list").innerHTML = '';
+            for (var i = 0; i < toDoList.length; ++i) {
+                document.getElementById("to-do-list").insertAdjacentHTML("beforeend", "<li>Item "+(i+1)+" = "+toDoList[i]+"</li>");
+            }
+        }
+
+        function deleteLast() {
+            toDoList.pop();
+            document.getElementById("to-do-list").innerHTML = '';
+            displayList();
+        }
+    </script>
+</head>
+<body>
+    <h1>Assignment 10.3: JavaScript - Part 3</h1>
+
+    <div>
+        <p>
+        To create a to-do list add an item in the text box and click the add button. Add as many items as you like.
+        You can delete the last entry you added if you made a mistake. Click the display list button to see the list.
+        </p>
+        <input type="text" id="to-do-list-input">
+        <button type="button" onclick="getInput()">Add</button>
+        <button type="button" onclick="deleteLast()">Delete Last Entry</button>
+        <button type="button" onclick="displayList()">Display List</button>
+    </div>
+    <hr>
+    <div>
+        <ul id="to-do-list" style="list-style-type: none">
+
+        </ul>
+    </div>
+</body>
+</html>
