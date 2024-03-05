@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+Assignment 12.2
+Author: Samuel Litton
+Date: 3/4/2024
+-->
+<head>
+    <meta charset="UTF-8">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" href="litton_Mod12_2.css">
+
+    <script>
+        var books = ["1. The Hobbit","2. The Fellowship of the Ring","3. The Two Towers","4. The Return of the King",
+        "5. Red Rising","6. Golden Son","7. The Giver","8. The Maze Runner","9. Percy Jackson","10. The Hunger Games"];
+
+        function topToBottom() {
+            document.getElementById("top-ten-books").innerHTML = "";
+
+            for (var i = 0; i < books.length; ++i) {
+                document.getElementById("top-ten-books").insertAdjacentHTML("beforeend", "<li>"+books[i]+"</li>");
+            }
+        }
+
+        function bottomToTop() {
+            document.getElementById("top-ten-books").innerHTML = "";
+
+            for (var i = 0; i < books.length; ++i) {
+                document.getElementById("top-ten-books").insertAdjacentHTML("afterbegin", "<li>"+books[i]+"</li>");
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="container">
+    <h1>Assignment 12.2: JavaScript - Part 4</h1>
+    <div id="div_1">
+        <h3>Top 10 Favorite Books</h3>
+        <button type="button" onclick="topToBottom()">Top to Bottom</button>
+        <button type="button" onclick="bottomToTop()">Bottom to Top</button>
+        <hr>
+        <ol id="top-ten-books">
+            <li>1. The Hobbit</li>
+            <li>2. The Fellowship of the Ring</li>
+            <li>3. The Two Towers</li>
+            <li>4. The Return of the King</li>
+            <li>5. Red Rising</li>
+            <li>6. Golden Son</li>
+            <li>7. The Giver</li>
+            <li>8. The Maze Runner</li>
+            <li>9. Percy Jackson</li>
+            <li>10. The Hunger Games</li>
+        </ol>
+    </div>
+    <div id="div_2">
+        <h3>5 Things I’ve Learned Since the Course Started</h3>
+        <ul>
+            <li>How to create webpages with HTML</li>
+            <li>How to stylize webpages with CSS</li>
+            <li>How to work with git</li>
+            <li>How to program with Java</li>
+            <li>How to program with Python</li>
+        </ul>
+    </div>
+    <div id="div_3">
+        <a href="../index.html">back to landing page</a>
+    </div>
+</div>
+</body>
+</html>
